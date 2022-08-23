@@ -123,8 +123,9 @@ Launch the frontend app locally.
         kubectl autoscale deployment frontend --cpu-percent=70 --min=3 --max=5
         
         kubectl autoscale deployment reverseproxy --cpu-percent=70 --min=3 --max=5
+- You can check the current status of the newly-made HorizontalPodAutoscaler, by running:
+
+                kubectl get hpa
 
 
-
-
-
+![image](https://user-images.githubusercontent.com/77249754/186186025-0023a049-b36c-4ff0-ad4c-7d3395be6559.png)
