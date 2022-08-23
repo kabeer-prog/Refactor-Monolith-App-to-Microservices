@@ -90,3 +90,6 @@ Launch the frontend app locally.
 
 ![image](https://user-images.githubusercontent.com/77249754/186168850-e89581ec-eb38-4146-8611-e2528ccee561.png)
 
+![image](https://user-images.githubusercontent.com/77249754/186169131-5c3169f0-6325-4665-a0d9-b09b7a611a0e.png)
+
+
