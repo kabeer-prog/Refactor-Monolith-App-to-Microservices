@@ -1,4 +1,9 @@
+# Circleci build pipeline showing successful build jobs
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/kabeer-prog/monolith-mic-udacity/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/kabeer-prog/monolith-mic-udacity/tree/main)
+
+# Microservices 
+
+![1_V3rlWCItJsmYN97fQ2a3HQ](https://user-images.githubusercontent.com/80678596/177031484-3adf2eba-1c26-4841-953b-306678961395.png)
 
 # Udagram Image Filtering Application
 
@@ -88,17 +93,36 @@ Launch the frontend app locally.
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
 
 # Kubernetes pods are deployed properly
-kubectl get pods 
+
+            kubectl get pods 
+            
 ![image](https://user-images.githubusercontent.com/77249754/186168850-e89581ec-eb38-4146-8611-e2528ccee561.png)
 
 ![image](https://user-images.githubusercontent.com/77249754/186169131-5c3169f0-6325-4665-a0d9-b09b7a611a0e.png)
 
 # Kubernetes services are set up properly
-kubectl describe services
+                           
+                           kubectl describe services
+                           
 ![image](https://user-images.githubusercontent.com/77249754/186172548-b711fd69-da24-40cb-bed6-1d39d8afcae8.png)
 ![image](https://user-images.githubusercontent.com/77249754/186172639-6ef0650d-ccd5-4a85-a3dc-bc1472667a14.png)
 ![image](https://user-images.githubusercontent.com/77249754/186172748-bda14573-1654-4793-a1d7-5f8737ce448c.png)
 ![image](https://user-images.githubusercontent.com/77249754/186172923-83f5cab8-cd4b-4f63-a340-4ec2ce8faba2.png)
+
+
+- Installation
+
+            kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+- Create the HorizontalPodAutoscaler:(Do this for all deployment)
+
+        kubectl autoscale deployment backend-feed --cpu-percent=70 --min=3 --max=5
+        
+        kubectl autoscale deployment backend-user --cpu-percent=70 --min=3 --max=5
+        
+        kubectl autoscale deployment frontend --cpu-percent=70 --min=3 --max=5
+        
+        kubectl autoscale deployment reverseproxy --cpu-percent=70 --min=3 --max=5
 
 
 
